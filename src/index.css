@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+/* =========================================================
+   COLOR SYSTEM
+   ========================================================= */
+
+:root {
+  /* Core */
+  --bg-primary: #070506;
+  --bg-secondary: #0d080b;
+  --bg-tertiary: #140c10;
+
+  /* Text */
+  --text-primary: #f7f2ed;
+  --text-secondary: #b8aaa8;
+  --text-muted: #75696b;
+
+  /* Wine */
+  --wine-dark: #3d101f;
+  --wine: #6f2038;
+  --wine-light: #9a3d58;
+  --wine-glow: rgba(154, 61, 88, 0.25);
+
+  /* Gold */
+  --gold-dark: #806316;
+  --gold: #c9a227;
+  --gold-light: #e2c45c;
+  --gold-glow: rgba(201, 162, 39, 0.2);
+
+  /* Emerald */
+  --green-dark: #123f30;
+  --green: #247a5b;
+  --green-light: #3ca77d;
+  --green-glow: rgba(60, 167, 125, 0.2);
+
+  /* UI */
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Surface */
+  --surface: rgba(255, 255, 255, 0.025);
+  --surface-hover: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.06);
+
+  /* Gradients */
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      var(--wine-dark),
+      var(--wine),
+      var(--gold-dark)
+    );
+
+  --gradient-accent:
+    linear-gradient(
+      135deg,
+      var(--wine),
+      var(--gold),
+      var(--green)
+    );
+}
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+[data-theme="light"] {
+  --bg-primary: #f5f0eb;
+  --bg-secondary: #ebe3dd;
+  --bg-tertiary: #dfd3cc;
+
+  --text-primary: #21171b;
+  --text-secondary: #5f5054;
+  --text-muted: #85767a;
+
+  --wine-dark: #451326;
+  --wine: #76243f;
+  --wine-light: #9b3e59;
+
+  --gold-dark: #795e16;
+  --gold: #a98218;
+  --gold-light: #c7a33b;
+
+  --green-dark: #154c39;
+  --green: #24745a;
+  --green-light: #31906d;
+
+  --border: rgba(60, 35, 45, 0.12);
+  --border-strong: rgba(60, 35, 45, 0.2);
+
+  --surface: rgba(69, 19, 38, 0.025);
+  --surface-hover: rgba(69, 19, 38, 0.055);
+  --surface-strong: rgba(69, 19, 38, 0.075);
+}
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+body {
+font-family:
+  Inter,
+  ui-sans-serif,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: var(--wine);
+  color: white;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   THEME-AWARE UTILITIES
+   ========================================================= */
+
+.theme-bg {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.theme-bg-secondary {
+  background: var(--bg-secondary);
+  transition: background-color 0.5s ease;
+}
+
+.theme-text {
+  color: var(--text-primary);
+  transition: color 0.5s ease;
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+  transition: color 0.5s ease;
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+  transition: color 0.5s ease;
+}
+
+.theme-border {
+  border-color: var(--border);
+  transition: border-color 0.5s ease;
+}
+
+.theme-surface {
+  background: var(--surface);
+  border-color: var(--border);
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+/* =========================================================
+   SECTION DIVIDERS
+   ========================================================= */
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(92%, 1400px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-strong),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* =========================================================
+   TRANSITIONS
+   ========================================================= */
+
+html,
+body,
+#root,
+section,
+footer {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* =========================================================
+   MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* =========================================================
+   TYPOGRAPHY REFINEMENT
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+/* =========================================================
+   PREMIUM INTERACTION SYSTEM
+   ========================================================= */
+
+.interactive-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.interactive-lift:hover {
+  transform: translateY(-3px);
+}
+
+.interactive-glow {
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.interactive-glow:hover {
+  box-shadow:
+    0 12px 35px rgba(111, 32, 56, 0.12),
+    0 0 0 1px rgba(201, 162, 39, 0.08);
+}
+
+@media (hover: none) {
+  .interactive-lift:hover {
+    transform: none;
+  }
+}

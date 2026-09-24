@@ -1,129 +1,167 @@
 @import "tailwindcss";
 
 /* =========================================================
-   COLOR SYSTEM
+   TECH-THUSIAST — GLOBAL DESIGN SYSTEM
    ========================================================= */
 
 :root {
-  /* Core */
-  --bg-primary: #070506;
-  --bg-secondary: #0d080b;
-  --bg-tertiary: #140c10;
+  --bg-primary: #08090d;
+  --bg-secondary: #0d0f14;
+  --bg-tertiary: #13161d;
 
-  /* Text */
-  --text-primary: #f7f2ed;
-  --text-secondary: #b8aaa8;
-  --text-muted: #75696b;
+  --text-primary: #f5f7fb;
+  --text-secondary: #a7adbb;
+  --text-muted: #687080;
 
-  /* Wine */
-  --wine-dark: #3d101f;
-  --wine: #6f2038;
-  --wine-light: #9a3d58;
-  --wine-glow: rgba(154, 61, 88, 0.25);
+  --accent-dark: #3439b8;
+  --accent: #545cff;
+  --accent-light: #858bff;
+  --accent-glow: rgba(84, 92, 255, 0.22);
 
-  /* Gold */
-  --gold-dark: #806316;
-  --gold: #c9a227;
-  --gold-light: #e2c45c;
-  --gold-glow: rgba(201, 162, 39, 0.2);
+  --cyan: #55d6ff;
+  --cyan-glow: rgba(85, 214, 255, 0.18);
 
-  /* Emerald */
-  --green-dark: #123f30;
-  --green: #247a5b;
-  --green-light: #3ca77d;
-  --green-glow: rgba(60, 167, 125, 0.2);
+  --green-dark: #14533d;
+  --green: #2f9e76;
+  --green-light: #6ee7b7;
+  --green-glow: rgba(110, 231, 183, 0.2);
 
-  /* UI */
-  --border: rgba(255, 255, 255, 0.09);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
 
-  /* Surface */
   --surface: rgba(255, 255, 255, 0.025);
-  --surface-hover: rgba(255, 255, 255, 0.05);
-  --surface-strong: rgba(255, 255, 255, 0.06);
+  --surface-hover: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.065);
 
-  /* Gradients */
+  --glass-bg: rgba(12, 14, 20, 0.68);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
   --gradient-primary:
     linear-gradient(
       135deg,
-      var(--wine-dark),
-      var(--wine),
-      var(--gold-dark)
+      var(--accent-dark),
+      var(--accent),
+      var(--accent-light)
     );
 
   --gradient-accent:
     linear-gradient(
       135deg,
-      var(--wine),
-      var(--gold),
-      var(--green)
+      var(--accent),
+      var(--cyan)
     );
+
+  --shadow-soft:
+    0 12px 40px rgba(0, 0, 0, 0.25);
+
+  --shadow-accent:
+    0 18px 55px rgba(84, 92, 255, 0.16);
 }
 
 /* =========================================================
    LIGHT THEME
    ========================================================= */
 
-[data-theme="light"] {
-  --bg-primary: #f5f0eb;
-  --bg-secondary: #ebe3dd;
-  --bg-tertiary: #dfd3cc;
+.theme-light {
+  --bg-primary: #f5f7fb;
+  --bg-secondary: #edf0f6;
+  --bg-tertiary: #e3e7ef;
 
-  --text-primary: #21171b;
-  --text-secondary: #5f5054;
-  --text-muted: #85767a;
+  --text-primary: #11131a;
+  --text-secondary: #535b6b;
+  --text-muted: #7b8494;
 
-  --wine-dark: #451326;
-  --wine: #76243f;
-  --wine-light: #9b3e59;
+  --accent-dark: #353bb4;
+  --accent: #4d55e8;
+  --accent-light: #747cff;
+  --accent-glow: rgba(77, 85, 232, 0.15);
 
-  --gold-dark: #795e16;
-  --gold: #a98218;
-  --gold-light: #c7a33b;
+  --cyan: #159bc4;
+  --cyan-glow: rgba(21, 155, 196, 0.12);
 
-  --green-dark: #154c39;
-  --green: #24745a;
-  --green-light: #31906d;
+  --green-dark: #15523e;
+  --green: #287e60;
+  --green-light: #3c9b78;
+  --green-glow: rgba(60, 155, 120, 0.15);
 
-  --border: rgba(60, 35, 45, 0.12);
-  --border-strong: rgba(60, 35, 45, 0.2);
+  --border: rgba(20, 25, 40, 0.10);
+  --border-strong: rgba(20, 25, 40, 0.16);
 
-  --surface: rgba(69, 19, 38, 0.025);
-  --surface-hover: rgba(69, 19, 38, 0.055);
-  --surface-strong: rgba(69, 19, 38, 0.075);
+  --surface: rgba(20, 25, 40, 0.025);
+  --surface-hover: rgba(20, 25, 40, 0.05);
+  --surface-strong: rgba(20, 25, 40, 0.075);
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(20, 25, 40, 0.09);
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      var(--accent-dark),
+      var(--accent),
+      var(--accent-light)
+    );
+
+  --gradient-accent:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--cyan)
+    );
+
+  --shadow-soft:
+    0 12px 40px rgba(30, 35, 55, 0.10);
+
+  --shadow-accent:
+    0 18px 55px rgba(77, 85, 232, 0.12);
 }
 
 /* =========================================================
    GLOBAL RESET
    ========================================================= */
 
-* {
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  background: var(--bg-primary);
-  overflow-x: hidden;
-}
-
 body {
-font-family:
-  Inter,
-  ui-sans-serif,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
-
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
-#root {
-  min-height: 100vh;
-  overflow-x: hidden;
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -131,72 +169,102 @@ a {
   text-decoration: none;
 }
 
-button,
-a {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed;
+img,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
 ::selection {
-  background: var(--wine);
-  color: white;
-}
-
-section {
-  position: relative;
-  overflow: hidden;
+  background: var(--accent);
+  color: #ffffff;
 }
 
 /* =========================================================
-   THEME-AWARE UTILITIES
+   THEME UTILITIES
    ========================================================= */
 
-.theme-bg {
-  background: var(--bg-primary);
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.text-primary {
   color: var(--text-primary);
-  transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
 }
 
-.theme-bg-secondary {
-  background: var(--bg-secondary);
-  transition: background-color 0.5s ease;
-}
-
-.theme-text {
-  color: var(--text-primary);
-  transition: color 0.5s ease;
-}
-
-.theme-text-secondary {
+.text-secondary {
   color: var(--text-secondary);
-  transition: color 0.5s ease;
 }
 
-.theme-text-muted {
+.text-muted {
   color: var(--text-muted);
-  transition: color 0.5s ease;
 }
 
-.theme-border {
+.border-theme {
   border-color: var(--border);
-  transition: border-color 0.5s ease;
 }
 
-.theme-surface {
-  background: var(--surface);
-  border-color: var(--border);
-  transition:
-    background-color 0.5s ease,
-    border-color 0.5s ease;
+/* =========================================================
+   GLASS
+   ========================================================= */
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* =========================================================
+   ACCENTS
+   ========================================================= */
+
+.accent-text {
+  color: var(--accent-light);
+}
+
+.accent-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================================================
+   TECH GRID
+   ========================================================= */
+
+.tech-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      var(--border) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--border) 1px,
+      transparent 1px
+    );
+  background-size: 52px 52px;
+}
+
+.theme-light .tech-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(20, 25, 40, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(20, 25, 40, 0.06) 1px,
+      transparent 1px
+    );
 }
 
 /* =========================================================
@@ -204,42 +272,80 @@ section {
    ========================================================= */
 
 .section-divider {
-  position: relative;
-}
-
-.section-divider::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: min(92%, 1400px);
+  width: 100%;
   height: 1px;
-  transform: translateX(-50%);
   background: linear-gradient(
     90deg,
     transparent,
     var(--border-strong),
     transparent
   );
-  pointer-events: none;
 }
 
 /* =========================================================
-   TRANSITIONS
+   FORM CONTROLS
    ========================================================= */
 
-html,
-body,
-#root,
-section,
-footer {
+input,
+textarea,
+select {
   transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 3px var(--accent-glow);
 }
 
 /* =========================================================
-   MOTION ACCESSIBILITY
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* =========================================================
+   MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -256,62 +362,69 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
 /* =========================================================
-   TYPOGRAPHY REFINEMENT
+   MOBILE
    ========================================================= */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 
-p {
-  text-wrap: pretty;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 4px;
-  border-radius: 6px;
-}
 /* =========================================================
-   PREMIUM INTERACTION SYSTEM
+   TOUCH DEVICES
    ========================================================= */
-
-.interactive-lift {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.interactive-lift:hover {
-  transform: translateY(-3px);
-}
-
-.interactive-glow {
-  transition:
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-
-.interactive-glow:hover {
-  box-shadow:
-    0 12px 35px rgba(111, 32, 56, 0.12),
-    0 0 0 1px rgba(201, 162, 39, 0.08);
-}
 
 @media (hover: none) {
-  .interactive-lift:hover {
-    transform: none;
+  * {
+    scroll-behavior: auto;
   }
+}
+/* =========================================================
+   GLOBAL THEME BACKGROUND
+   ========================================================= */
+
+.theme-dark,
+.theme-light {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Keep the entire page surface connected to the active theme */
+.theme-dark main,
+.theme-light main {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Sections should inherit the active theme instead of
+   creating isolated background blocks */
+.theme-dark main > section,
+.theme-light main > section {
+  background-color: transparent;
+}
+
+/* Footer intentionally owns its own secondary surface */
+.theme-dark footer,
+.theme-light footer {
+  color: var(--text-primary);
+}
+
+/* Ensure theme transitions reach the major page surfaces */
+.theme-dark,
+.theme-light,
+.theme-dark main,
+.theme-light main,
+.theme-dark footer,
+.theme-light footer {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }

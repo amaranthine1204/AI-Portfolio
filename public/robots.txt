@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-portfolio-2rl38pfrw-amaranthine.vercel.app/sitemap.xml

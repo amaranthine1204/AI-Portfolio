@@ -21,12 +21,12 @@ const projects = [
     number: "01",
     title: "AI-Powered Social Media System",
     category: "AI · CONTENT · AUTOMATION",
-    status: "BUILD",
+    status: "BUILT",
     accent: "var(--accent)",
     icon: Sparkles,
 
     description:
-      "A workflow for turning raw content ideas into structured, AI-assisted social media content ready for review and distribution.",
+      "A practical automation system that moves content ideas through AI processing, structured storage and a distribution-ready workflow.",
 
     workflow: [
       {
@@ -55,40 +55,41 @@ const projects = [
 
     caseStudy: {
       problem:
-        "Content creation can become repetitive when ideas, content generation, organisation and publishing are handled as separate manual tasks.",
+        "Content workflows can become repetitive when ideas, AI generation, organisation and distribution are handled as separate manual tasks.",
 
       objective:
-        "Create a connected workflow that captures content ideas, processes them with AI, structures the output and prepares the content system for distribution.",
+        "Build a connected workflow that captures content ideas, processes them with AI, structures the output and prepares the content system for downstream distribution.",
 
       whatIBuilt: [
-        "Designed an Airtable-based content system for storing structured content ideas and metadata.",
-        "Connected Make with Gemini to process content ideas using an AI generation step.",
-        "Mapped information between automation modules and structured the workflow around reusable data.",
-        "Designed the workflow to support multiple social distribution channels.",
+        "Designed an Airtable content system for storing structured ideas, content pillars and target platforms.",
+        "Connected Make with Gemini to process content ideas through an AI generation step.",
+        "Mapped data between automation modules and structured the workflow around reusable fields.",
+        "Designed the system with multiple social distribution channels in mind.",
       ],
 
       technicalFocus: [
-        "Data mapping",
+        "Make automation",
         "AI workflow integration",
-        "Structured content systems",
-        "Automation logic",
+        "Airtable data structure",
+        "Data mapping",
+        "Content workflows",
       ],
 
       learning:
-        "This project strengthened my understanding of how AI becomes more useful when it is connected to structured data and a repeatable workflow rather than used as an isolated content-generation tool.",
+        "The project strengthened my understanding of how AI becomes more useful when connected to structured data and a repeatable workflow rather than used as an isolated content-generation tool.",
     },
   },
 
   {
     number: "02",
-    title: "Automated Lead Qualification",
+    title: "AI Lead Qualification System",
     category: "AI · LEADS · CRM",
     status: "ARCHITECTURE",
     accent: "var(--cyan)",
     icon: GitBranch,
 
     description:
-      "An automation architecture for receiving leads, validating information, using AI-assisted evaluation and routing qualified leads into the appropriate business process.",
+      "A workflow architecture for receiving leads, validating information, evaluating lead quality and routing qualified prospects into a CRM or follow-up process.",
 
     workflow: [
       {
@@ -117,16 +118,16 @@ const projects = [
 
     caseStudy: {
       problem:
-        "Businesses can receive leads from multiple sources, making it difficult to consistently validate, evaluate and route them without manual intervention.",
+        "Leads can arrive from different sources with inconsistent information, making manual validation, qualification and routing time-consuming.",
 
       objective:
-        "Design a workflow that moves lead information through a structured qualification process before routing it to the appropriate CRM or follow-up process.",
+        "Design a structured workflow that validates incoming lead information, evaluates it with AI-assisted logic and routes the result to the appropriate business process.",
 
       whatIBuilt: [
         "Designed a webhook-based lead intake architecture.",
-        "Structured validation steps before AI processing.",
-        "Created an AI-assisted evaluation stage for interpreting lead information.",
-        "Designed a scoring and routing layer for downstream CRM actions.",
+        "Added validation stages before AI processing.",
+        "Structured an AI-assisted evaluation layer for interpreting lead information.",
+        "Designed a scoring and routing stage for downstream CRM actions.",
       ],
 
       technicalFocus: [
@@ -138,7 +139,7 @@ const projects = [
       ],
 
       learning:
-        "The project helped me think more carefully about workflow architecture, especially the importance of validating data before sending it into AI or downstream business processes.",
+        "This architecture strengthened my understanding of why validation and clear decision logic should come before AI processing and downstream automation.",
     },
   },
 
@@ -151,7 +152,7 @@ const projects = [
     icon: Mail,
 
     description:
-      "An automated email workflow that connects triggers, audience information, AI-assisted content generation and campaign actions into a structured process.",
+      "An event-driven email automation concept connecting triggers, audience data, AI-assisted content generation and campaign actions.",
 
     workflow: [
       {
@@ -180,14 +181,14 @@ const projects = [
 
     caseStudy: {
       problem:
-        "Email workflows often involve several disconnected steps, from receiving an event to checking audience information and preparing campaign content.",
+        "Email automation can involve several disconnected steps, from receiving an event to checking audience information and preparing campaign content.",
 
       objective:
-        "Create a modular automation structure that can process an event, work with audience data, generate content with AI and trigger the appropriate email action.",
+        "Explore a modular automation structure that can process an event, work with audience data, generate content with AI and trigger an appropriate email action.",
 
       whatIBuilt: [
         "Designed an event-driven email automation structure.",
-        "Connected Make with Klaviyo for campaign-related workflow actions.",
+        "Explored Make and Klaviyo integration for campaign-related workflow actions.",
         "Included audience and data-processing stages before campaign execution.",
         "Explored AI-assisted email generation as part of the workflow.",
       ],
@@ -201,7 +202,7 @@ const projects = [
       ],
 
       learning:
-        "This project improved my understanding of how marketing automation depends on clean data flow, well-defined triggers and careful sequencing between automation steps.",
+        "The project improved my understanding of how marketing automation depends on clean data flow, well-defined triggers and careful sequencing between automation steps.",
     },
   },
 
@@ -214,7 +215,7 @@ const projects = [
     icon: Network,
 
     description:
-      "A collection of practical experiments exploring how applications communicate through APIs, webhooks and structured data transformations.",
+      "A collection of technical experiments exploring how applications communicate through APIs, webhooks and structured data transformations.",
 
     workflow: [
       {
@@ -243,17 +244,17 @@ const projects = [
 
     caseStudy: {
       problem:
-        "Modern automation depends on systems communicating with one another, but different platforms often expose different data structures, authentication methods and API behaviours.",
+        "Different applications expose different data structures, authentication methods and API behaviours, making reliable integration an important part of automation work.",
 
       objective:
-        "Build practical familiarity with the underlying mechanics of integrations rather than relying only on pre-built automation modules.",
+        "Build practical familiarity with the underlying mechanics of integrations rather than relying entirely on pre-built automation modules.",
 
       whatIBuilt: [
         "Experimented with webhook-based event handling.",
-        "Worked with JSON data structures and field mapping.",
+        "Worked with JSON structures and field mapping.",
         "Explored REST API requests and responses.",
         "Practised transforming data between workflow steps.",
-        "Tested how application events can trigger downstream system actions.",
+        "Tested how application events can trigger downstream actions.",
       ],
 
       technicalFocus: [
@@ -265,7 +266,7 @@ const projects = [
       ],
 
       learning:
-        "These experiments have helped me understand what happens underneath no-code automation tools and given me a stronger foundation for building more reliable integrations.",
+        "These experiments have helped me understand what happens underneath no-code automation platforms and strengthened my foundation for building more reliable integrations.",
     },
   },
 ]
@@ -273,17 +274,29 @@ const projects = [
 function WorkflowMap({ workflow, accent }) {
   return (
     <div className="relative">
+      {/* DESKTOP */}
       <div className="hidden overflow-x-auto pb-3 lg:block">
         <div className="flex min-w-max items-center">
           {workflow.map((step, index) => {
             const Icon = step.icon
 
             return (
-              <div key={step.label} className="flex items-center">
+              <div
+                key={step.label}
+                className="flex items-center"
+              >
                 <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  initial={{
+                    opacity: 0,
+                    y: 8,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
                   transition={{
                     duration: 0.35,
                     delay: index * 0.06,
@@ -301,12 +314,17 @@ function WorkflowMap({ workflow, accent }) {
                       color: accent,
                     }}
                   >
-                    <Icon size={15} strokeWidth={1.8} />
+                    <Icon
+                      size={15}
+                      strokeWidth={1.8}
+                    />
                   </span>
 
                   <span
                     className="whitespace-nowrap text-xs font-medium"
-                    style={{ color: "var(--text-secondary)" }}
+                    style={{
+                      color: "var(--text-secondary)",
+                    }}
                   >
                     {step.label}
                   </span>
@@ -326,6 +344,7 @@ function WorkflowMap({ workflow, accent }) {
         </div>
       </div>
 
+      {/* MOBILE */}
       <div className="space-y-2 lg:hidden">
         {workflow.map((step, index) => {
           const Icon = step.icon
@@ -346,12 +365,17 @@ function WorkflowMap({ workflow, accent }) {
                     color: accent,
                   }}
                 >
-                  <Icon size={15} strokeWidth={1.8} />
+                  <Icon
+                    size={15}
+                    strokeWidth={1.8}
+                  />
                 </span>
 
                 <span
                   className="text-xs font-medium"
-                  style={{ color: "var(--text-secondary)" }}
+                  style={{
+                    color: "var(--text-secondary)",
+                  }}
                 >
                   {step.label}
                 </span>
@@ -360,7 +384,9 @@ function WorkflowMap({ workflow, accent }) {
               {index < workflow.length - 1 && (
                 <div
                   className="ml-7 h-2 w-px"
-                  style={{ background: "var(--border-strong)" }}
+                  style={{
+                    background: "var(--border-strong)",
+                  }}
                 />
               )}
             </div>
@@ -374,10 +400,22 @@ function WorkflowMap({ workflow, accent }) {
 function CaseStudy({ project, onClose }) {
   return (
     <motion.div
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: "auto" }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      initial={{
+        opacity: 0,
+        height: 0,
+      }}
+      animate={{
+        opacity: 1,
+        height: "auto",
+      }}
+      exit={{
+        opacity: 0,
+        height: 0,
+      }}
+      transition={{
+        duration: 0.4,
+        ease: "easeInOut",
+      }}
       className="overflow-hidden"
     >
       <div
@@ -387,18 +425,23 @@ function CaseStudy({ project, onClose }) {
           borderColor: "var(--border)",
         }}
       >
+        {/* HEADER */}
         <div className="mb-7 flex items-center justify-between gap-4">
           <div>
             <p
               className="font-mono text-[10px] tracking-[0.2em]"
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
             >
               CASE STUDY
             </p>
 
             <h4
               className="mt-2 text-xl font-semibold"
-              style={{ color: "var(--text-primary)" }}
+              style={{
+                color: "var(--text-primary)",
+              }}
             >
               Inside the system
             </h4>
@@ -418,84 +461,111 @@ function CaseStudy({ project, onClose }) {
           </button>
         </div>
 
+        {/* PROBLEM + OBJECTIVE */}
         <div className="grid gap-7 lg:grid-cols-2">
           <div>
-            <div className="mb-6">
-              <p
-                className="font-mono text-[10px] tracking-[0.18em]"
-                style={{ color: project.accent }}
-              >
-                THE PROBLEM
-              </p>
+            <p
+              className="font-mono text-[10px] tracking-[0.18em]"
+              style={{
+                color: project.accent,
+              }}
+            >
+              THE PROBLEM
+            </p>
 
-              <p
-                className="mt-3 text-sm leading-7"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                {project.caseStudy.problem}
-              </p>
-            </div>
-
-            <div>
-              <p
-                className="font-mono text-[10px] tracking-[0.18em]"
-                style={{ color: project.accent }}
-              >
-                OBJECTIVE
-              </p>
-
-              <p
-                className="mt-3 text-sm leading-7"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                {project.caseStudy.objective}
-              </p>
-            </div>
+            <p
+              className="mt-3 text-sm leading-7"
+              style={{
+                color: "var(--text-secondary)",
+              }}
+            >
+              {project.caseStudy.problem}
+            </p>
           </div>
 
           <div>
             <p
               className="font-mono text-[10px] tracking-[0.18em]"
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
             >
-              WHAT I BUILT
+              OBJECTIVE
             </p>
 
-            <div className="mt-4 space-y-3">
-              {project.caseStudy.whatIBuilt.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3"
-                >
-                  <CheckCircle2
-                    size={16}
-                    className="mt-1 shrink-0"
-                    style={{ color: project.accent }}
-                    strokeWidth={1.8}
-                  />
-
-                  <p
-                    className="text-sm leading-6"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <p
+              className="mt-3 text-sm leading-7"
+              style={{
+                color: "var(--text-secondary)",
+              }}
+            >
+              {project.caseStudy.objective}
+            </p>
           </div>
         </div>
 
+        {/* DIVIDER */}
         <div
           className="my-7 h-px"
-          style={{ background: "var(--border)" }}
+          style={{
+            background: "var(--border)",
+          }}
+        />
+
+        {/* WHAT I BUILT */}
+        <div>
+          <p
+            className="font-mono text-[10px] tracking-[0.18em]"
+            style={{
+              color: project.accent,
+            }}
+          >
+            WHAT I BUILT
+          </p>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {project.caseStudy.whatIBuilt.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3"
+              >
+                <CheckCircle2
+                  size={16}
+                  className="mt-1 shrink-0"
+                  style={{
+                    color: project.accent,
+                  }}
+                  strokeWidth={1.8}
+                />
+
+                <p
+                  className="text-sm leading-6"
+                  style={{
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* TECHNICAL FOCUS + LEARNING */}
+        <div
+          className="my-7 h-px"
+          style={{
+            background: "var(--border)",
+          }}
         />
 
         <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p
               className="font-mono text-[10px] tracking-[0.18em]"
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
             >
               TECHNICAL FOCUS
             </p>
@@ -520,14 +590,18 @@ function CaseStudy({ project, onClose }) {
           <div>
             <p
               className="font-mono text-[10px] tracking-[0.18em]"
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
             >
               WHAT I LEARNED
             </p>
 
             <p
               className="mt-3 text-sm leading-7"
-              style={{ color: "var(--text-secondary)" }}
+              style={{
+                color: "var(--text-secondary)",
+              }}
             >
               {project.caseStudy.learning}
             </p>
@@ -544,9 +618,18 @@ function ProjectCard({ project, index }) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      initial={{
+        opacity: 0,
+        y: 24,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
       transition={{
         duration: 0.55,
         delay: index * 0.08,
@@ -561,6 +644,7 @@ function ProjectCard({ project, index }) {
         borderColor: "var(--border-strong)",
       }}
     >
+      {/* ACCENT LINE */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-70"
         style={{
@@ -568,6 +652,7 @@ function ProjectCard({ project, index }) {
         }}
       />
 
+      {/* GLOW */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-10"
         style={{
@@ -576,6 +661,8 @@ function ProjectCard({ project, index }) {
       />
 
       <div className="relative z-10 p-6 sm:p-8">
+
+        {/* TOP */}
         <div className="flex items-start justify-between gap-5">
           <div className="flex items-center gap-4">
             <div
@@ -586,20 +673,27 @@ function ProjectCard({ project, index }) {
                 color: project.accent,
               }}
             >
-              <Icon size={21} strokeWidth={1.7} />
+              <Icon
+                size={21}
+                strokeWidth={1.7}
+              />
             </div>
 
             <div>
               <span
                 className="font-mono text-[10px] tracking-[0.2em]"
-                style={{ color: project.accent }}
+                style={{
+                  color: project.accent,
+                }}
               >
                 {project.number}
               </span>
 
               <p
                 className="mt-1 text-[10px] font-medium tracking-[0.16em]"
-                style={{ color: "var(--text-muted)" }}
+                style={{
+                  color: "var(--text-muted)",
+                }}
               >
                 {project.category}
               </p>
@@ -618,36 +712,50 @@ function ProjectCard({ project, index }) {
           </span>
         </div>
 
+        {/* TITLE */}
         <h3
           className="mt-7 text-2xl font-semibold tracking-tight sm:text-3xl"
-          style={{ color: "var(--text-primary)" }}
+          style={{
+            color: "var(--text-primary)",
+          }}
         >
           {project.title}
         </h3>
 
+        {/* DESCRIPTION */}
         <p
           className="mt-4 max-w-3xl text-sm leading-7 sm:text-base"
-          style={{ color: "var(--text-secondary)" }}
+          style={{
+            color: "var(--text-secondary)",
+          }}
         >
           {project.description}
         </p>
 
+        {/* DIVIDER */}
         <div
           className="my-7 h-px"
-          style={{ background: "var(--border)" }}
+          style={{
+            background: "var(--border)",
+          }}
         />
 
+        {/* WORKFLOW */}
         <div>
           <div className="mb-4 flex items-center gap-2">
             <Workflow
               size={14}
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
               strokeWidth={1.8}
             />
 
             <span
               className="font-mono text-[10px] tracking-[0.18em]"
-              style={{ color: "var(--text-muted)" }}
+              style={{
+                color: "var(--text-muted)",
+              }}
             >
               WORKFLOW
             </span>
@@ -659,6 +767,7 @@ function ProjectCard({ project, index }) {
           />
         </div>
 
+        {/* TOOLS + BUTTON */}
         <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-2">
             {project.tools.map((tool) => (
@@ -685,18 +794,23 @@ function ProjectCard({ project, index }) {
               color: "var(--text-secondary)",
             }}
           >
-            {expanded ? "Close case study" : "Explore case study"}
+            {expanded
+              ? "Close case study"
+              : "Explore case study"}
 
             <ChevronDown
               size={15}
               className={`transition-transform duration-300 ${
                 expanded ? "rotate-180" : ""
               }`}
-              style={{ color: project.accent }}
+              style={{
+                color: project.accent,
+              }}
             />
           </button>
         </div>
 
+        {/* CASE STUDY */}
         <AnimatePresence initial={false}>
           {expanded && (
             <CaseStudy
@@ -715,24 +829,54 @@ function Projects() {
     <section
       id="projects"
       className="relative overflow-hidden py-24 sm:py-32"
+      style={{
+        background: "var(--bg-primary)",
+        color: "var(--text-primary)",
+      }}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      {/* BACKGROUND GLOW */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(circle at 15% 30%, var(--accent-glow), transparent 25%), radial-gradient(circle at 90% 70%, var(--cyan-glow), transparent 20%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+        {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
           className="mb-14 max-w-3xl"
         >
           <div className="mb-5 flex items-center gap-3">
             <span
               className="h-px w-10"
-              style={{ background: "var(--accent)" }}
+              style={{
+                background: "var(--accent)",
+              }}
             />
 
             <span
               className="font-mono text-xs font-medium tracking-[0.25em]"
-              style={{ color: "var(--accent-light)" }}
+              style={{
+                color: "var(--accent-light)",
+              }}
             >
               02 · SELECTED SYSTEMS
             </span>
@@ -740,25 +884,35 @@ function Projects() {
 
           <h2
             className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
-            style={{ color: "var(--text-primary)" }}
+            style={{
+              color: "var(--text-primary)",
+            }}
           >
             Systems,
             <br />
-            <span style={{ color: "var(--text-secondary)" }}>
+
+            <span
+              style={{
+                color: "var(--text-secondary)",
+              }}
+            >
               not just workflows.
             </span>
           </h2>
 
           <p
             className="mt-6 max-w-2xl text-base leading-7 sm:text-lg"
-            style={{ color: "var(--text-secondary)" }}
+            style={{
+              color: "var(--text-secondary)",
+            }}
           >
-            A selection of automation systems and technical experiments
-            focused on connecting tools, structuring data and using AI to
-            reduce repetitive work.
+            A selection of automation systems, architectures and
+            technical experiments focused on connecting tools,
+            structuring data and using AI to reduce repetitive work.
           </p>
         </motion.div>
 
+        {/* PROJECTS */}
         <div className="space-y-5">
           {projects.map((project, index) => (
             <ProjectCard
@@ -769,11 +923,22 @@ function Projects() {
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
+          initial={{
+            opacity: 0,
+            y: 18,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.55,
+          }}
           className="mt-14 flex flex-col gap-5 rounded-3xl border p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
           style={{
             background:
@@ -784,23 +949,30 @@ function Projects() {
           <div>
             <p
               className="font-mono text-[10px] tracking-[0.2em]"
-              style={{ color: "var(--accent-light)" }}
+              style={{
+                color: "var(--accent-light)",
+              }}
             >
               NEXT SYSTEM
             </p>
 
             <h3
               className="mt-2 text-xl font-semibold"
-              style={{ color: "var(--text-primary)" }}
+              style={{
+                color: "var(--text-primary)",
+              }}
             >
               Have a workflow in mind?
             </h3>
 
             <p
               className="mt-2 text-sm"
-              style={{ color: "var(--text-muted)" }}
+              style={{
+                color: "var(--text-muted)",
+              }}
             >
-              Let's turn the process into something that can work smarter.
+              Let's turn the process into something that can
+              work smarter.
             </p>
           </div>
 
@@ -814,9 +986,12 @@ function Projects() {
             }}
           >
             Start a conversation
+
             <ArrowRight
               size={16}
-              style={{ color: "var(--accent-light)" }}
+              style={{
+                color: "var(--accent-light)",
+              }}
             />
           </a>
         </motion.div>

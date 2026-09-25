@@ -9,12 +9,9 @@ import {
   ArrowDown,
   ArrowUpRight,
   Bot,
-  CheckCircle2,
   Code2,
   Cpu,
   GitBranch,
-  Layers3,
-  Sparkles,
   Workflow,
   Zap,
 } from "lucide-react"
@@ -54,6 +51,24 @@ function Hero() {
     mouseY.set(0)
   }
 
+  const orbitNodes = [
+    {
+      icon: Zap,
+      position: "left-[20%] top-[63%]",
+      color: "var(--green-light)",
+    },
+    {
+      icon: GitBranch,
+      position: "right-[17%] top-[25%]",
+      color: "var(--cyan)",
+    },
+    {
+      icon: Cpu,
+      position: "left-[25%] bottom-[11%]",
+      color: "var(--accent-light)",
+    },
+  ]
+
   return (
     <section
       id="home"
@@ -75,7 +90,7 @@ function Hero() {
       />
 
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         aria-hidden="true"
         style={{
           background:
@@ -88,7 +103,7 @@ function Hero() {
       ===================================================== */}
 
       <div
-        className="absolute inset-x-0 top-0 h-40 pointer-events-none"
+        className="pointer-events-none absolute inset-x-0 top-0 h-40"
         style={{
           background:
             "linear-gradient(to bottom, var(--bg-primary), transparent)",
@@ -154,9 +169,7 @@ function Hero() {
               Build intelligent
               <br />
 
-              <span
-                className="accent-gradient-text"
-              >
+              <span className="accent-gradient-text">
                 systems that work.
               </span>
             </motion.h1>
@@ -237,22 +250,19 @@ function Hero() {
               }}
               className="mt-9 flex flex-wrap gap-x-5 gap-y-2"
             >
-              {[
-                "AI",
-                "AUTOMATION",
-                "WORKFLOWS",
-                "APIs",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="text-[10px] font-medium tracking-[0.2em]"
-                  style={{
-                    color: "var(--text-muted)",
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
+              {["AI", "AUTOMATION", "WORKFLOWS", "APIs"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="text-[10px] font-medium tracking-[0.2em]"
+                    style={{
+                      color: "var(--text-muted)",
+                    }}
+                  >
+                    {item}
+                  </span>
+                ),
+              )}
             </motion.div>
           </div>
 
@@ -268,7 +278,7 @@ function Hero() {
             className="relative mx-auto h-[440px] w-full max-w-[520px] sm:h-[500px]"
           >
 
-            {/* Outer rings */}
+            {/* Outer ring */}
 
             <motion.div
               animate={{
@@ -284,6 +294,8 @@ function Hero() {
                 borderColor: "var(--border)",
               }}
             />
+
+            {/* Inner ring */}
 
             <motion.div
               animate={{
@@ -318,7 +330,9 @@ function Hero() {
               }}
             />
 
-            {/* Floating node — AI */}
+            {/* =================================================
+                FLOATING AI NODE
+            ================================================= */}
 
             <motion.div
               animate={{
@@ -369,7 +383,9 @@ function Hero() {
               </div>
             </motion.div>
 
-            {/* Floating node — automation */}
+            {/* =================================================
+                FLOATING AUTOMATION NODE
+            ================================================= */}
 
             <motion.div
               animate={{
@@ -433,26 +449,26 @@ function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute left-1/2 top-1/2 h-[245px] w-[245px] -translate-x-1/2 -translate-y-1/2 sm:h-[280px] sm:w-[280px]"
+              className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 sm:h-[340px] sm:w-[340px]"
             >
 
-              {/* Glow */}
+              {/* Central glow */}
 
               <div
-                className="absolute inset-8 rounded-full blur-3xl"
+                className="absolute inset-6 rounded-full blur-3xl"
                 style={{
                   background:
                     "radial-gradient(circle, var(--accent-glow), transparent 70%)",
                 }}
+                aria-hidden="true"
               />
 
-              {/* Avatar container */}
+              {/* System surface */}
 
               <div
                 className="absolute inset-5 overflow-hidden rounded-[42%] border"
                 style={{
-                  background:
-                    "linear-gradient(145deg, var(--surface-strong), var(--surface))",
+                  background: "rgba(10, 12, 18, 0.28)",
                   borderColor: "var(--border-strong)",
                   boxShadow:
                     "0 30px 80px rgba(0,0,0,0.28), 0 0 50px var(--accent-glow)",
@@ -460,7 +476,7 @@ function Hero() {
                 }}
               >
 
-                {/* Decorative code lines */}
+                {/* Decorative code dots */}
 
                 <div
                   className="absolute left-4 top-5 flex gap-1.5 opacity-50"
@@ -471,96 +487,60 @@ function Hero() {
                   <span className="h-1.5 w-1.5 rounded-full bg-current" />
                 </div>
 
+                {/* Code icon */}
+
                 <div
                   className="absolute right-5 top-5"
                   style={{
                     color: "var(--accent-light)",
                   }}
+                  aria-hidden="true"
                 >
                   <Code2 size={14} />
                 </div>
 
-                {/* Avatar */}
+                {/* =================================================
+                    PROFILE PORTRAIT
+                ================================================= */}
 
                 <div className="absolute inset-0 flex items-center justify-center">
-
-                  {/* Head */}
-
-                  <div
-                    className="relative h-[105px] w-[88px] rounded-[45%] border sm:h-[120px] sm:w-[100px]"
-                    style={{
-                      background:
-                        "linear-gradient(145deg, #202431, #0d0f14)",
-                      borderColor: "var(--border-strong)",
-                      boxShadow:
-                        "0 0 35px var(--accent-glow)",
+                  <motion.div
+                    animate={{
+                      y: [0, -6, 0],
                     }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="relative h-[225px] w-[190px] sm:h-[270px] sm:w-[225px]"
                   >
 
-                    {/* Hair */}
+                    {/* Portrait glow */}
 
                     <div
-                      className="absolute -left-1 -top-2 h-12 w-[102%] rounded-t-[50%]"
+                      className="absolute inset-[18%] rounded-full blur-3xl"
                       style={{
                         background:
-                          "linear-gradient(135deg, #11131a, #2a2f3c)",
+                          "radial-gradient(circle, var(--accent-glow), transparent 68%)",
                       }}
+                      aria-hidden="true"
                     />
 
-                    {/* Eyes */}
+                    {/* Portrait */}
 
-                    <div className="absolute left-1/2 top-[48%] flex -translate-x-1/2 gap-7">
-                      <span
-                        className="h-1.5 w-3 rounded-full"
-                        style={{
-                          background: "var(--cyan)",
-                          boxShadow: "0 0 10px var(--cyan)",
-                        }}
-                      />
-
-                      <span
-                        className="h-1.5 w-3 rounded-full"
-                        style={{
-                          background: "var(--cyan)",
-                          boxShadow: "0 0 10px var(--cyan)",
-                        }}
-                      />
-                    </div>
-
-                    {/* Face accent */}
-
-                    <div
-                      className="absolute bottom-[20%] left-1/2 h-1 w-7 -translate-x-1/2 rounded-full"
-                      style={{
-                        background: "var(--accent)",
-                        opacity: 0.7,
-                      }}
+                    <img
+                      src="/profile-cutout.png"
+                      alt="Oluwaseyi Abiola Sanni — Tech-thusiast"
+                      className="relative z-10 h-full w-full object-contain object-center"
+                      loading="eager"
                     />
-                  </div>
-
-                  {/* Body */}
-
-                  <div
-                    className="absolute bottom-[13%] h-[75px] w-[155px] rounded-t-[55px] border sm:h-[85px] sm:w-[175px]"
-                    style={{
-                      background:
-                        "linear-gradient(145deg, #171a23, #0b0d12)",
-                      borderColor: "var(--border)",
-                    }}
-                  >
-
-                    <div
-                      className="absolute left-1/2 top-7 -translate-x-1/2 text-[8px] font-semibold tracking-[0.25em]"
-                      style={{
-                        color: "var(--accent-light)",
-                      }}
-                    >
-                      TECH-THUSIAST
-                    </div>
-                  </div>
+                  </motion.div>
                 </div>
 
-                {/* System status */}
+                {/* =================================================
+                    SYSTEM STATUS
+                ================================================= */}
 
                 <div
                   className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border px-3 py-1.5 text-[8px] font-semibold tracking-[0.14em]"
@@ -587,23 +567,7 @@ function Hero() {
                 SMALL ORBIT NODES
             ================================================= */}
 
-            {[
-              {
-                icon: Zap,
-                position: "left-[20%] top-[63%]",
-                color: "var(--green-light)",
-              },
-              {
-                icon: GitBranch,
-                position: "right-[17%] top-[25%]",
-                color: "var(--cyan)",
-              },
-              {
-                icon: Cpu,
-                position: "left-[25%] bottom-[11%]",
-                color: "var(--accent-light)",
-              },
-            ].map((node, index) => {
+            {orbitNodes.map((node, index) => {
               const Icon = node.icon
 
               return (
